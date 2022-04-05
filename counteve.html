@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+ <input type=button ondblclick="call()"> click </button>
+   
+ <p id="demo"></p>
+
+ <script>
+function call() {
+let text;
+if (confirm("Press a button!") == true) {
+ text = "Thank you!";
+} else {
+ text = "enter valid input!";
+}
+document.getElementById("demo").innerHTML = text;
+}
+ </script>
+
+ 
+<button onclick="stopColor()">Stop Toggling</button>
+<script>
+    myInterval = setInterval(setColor, 500);
+     
+    function setColor() {
+      let x = document.body;
+      x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+    }
+     
+    function stopColor() {
+      clearInterval(myInterval);
+    }
+    </script>
+    
+ </body>
+ </html>
